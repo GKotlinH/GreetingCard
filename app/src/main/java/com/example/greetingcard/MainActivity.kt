@@ -35,10 +35,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Surface(color = Color.Cyan) {
+    Surface(
+        modifier = modifier,
+        color = Color.Cyan
+    ) {
         Text(
             text = "Hi, my name is $name!",
-            modifier = modifier.padding(24.dp)
+            modifier = Modifier.padding(24.dp)
         )
     }
 }
@@ -47,6 +50,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     GreetingCardTheme {
-        Greeting("PYY")
+        Greeting("Android")
     }
 }
